@@ -1,7 +1,6 @@
- 
-  let habits = JSON.parse(localStorage.getItem('habits')) || [];
-  let checks = JSON.parse(localStorage.getItem('checks')) || {};
-  let weekOffset = 0;
+let habits = JSON.parse(localStorage.getItem('habits')) || [];
+let checks = JSON.parse(localStorage.getItem('checks')) || {};
+let weekOffset = 0;
 
 
   function save() {
@@ -36,8 +35,6 @@
     today.setHours(0,0,0,0);
     return d > today;
   }
-
- 
   function calcStreak(habitId) {
     let streak = 0;
     let d = new Date();
@@ -50,9 +47,7 @@
       d.setDate(d.getDate() - 1);
     }
     return streak;
-  }
-
-  
+  }  
   function updateWeekLabel() {
     const dates = getWeekDates(weekOffset);
     const opts = { month: 'short', day: 'numeric' };
