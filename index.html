@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="navbar container">
+                <a href="index.html">
+                    <img src="logo.png" alt="website logo" class="logo">
+                </a>
+                <div class="input-field">
+                    <input type="text" placeholder="Add a Habit" class="input-box">
+                    <button type="submit" class="add-btn">
+                        <i class="fa-solid fa-plus"></i>
+                        Add Habit
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="mid-div">
+            <div>
+                <p class="week-rep">This Week
+                    <!-- <span><i class="fa-solid fa-calendar-week"></i></span> -->
+                </p>
+                <div class="date-div">
+                    <p class="date" id="date">May 19 - May 25, 2026</p>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="previous-btn cal-btn" id="previous-btn">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="next-btn cal-btn" id="next-btn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <button class="today-btn" id="today-btn">
+                    <i class="fa-regular fa-calendar"></i>
+                    </i> Today</button>
+            </div>
+        </div>
+        <div class="table-wrapper">
+            <table class="habit-table">
+                <thead>
+                    <tr>
+                        <th class="habit-field"><strong>Habit</strong></th>
+                        <th>Streak</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                        <th>Sun</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="habit-name"></td>
+                        <td class="streak"><span><i class="fa-solid fa-meteor streak-icon streak-in-table"></i>
+                            </span>Days</td>
+                        <td><button class="check-btn checked"></button></td>
+                        <td><button class="check-btn checked"></button></td>
+                        <td><button class="check-btn checked"></button></td>
+                        <td><button class="check-btn checked"></button></td>
+                        <td><button class="check-btn checked"></button></td>
+                        <td><button class="check-btn checked"></button></td>
+                        <td><button class="check-btn checked"></button></td>
+                        <td class="cont-btn"><button class="rename-btn in-table-btn"><i
+                                    class="fa-solid fa-pen"></i></button>
+                            <button class="remove-btn in-table-btn"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal-icon">🗑️</div>
+    <p class="modal-title">Delete Habit?</p>
+    <p class="modal-subtitle" id="modal-subtitle"></p>
+    <div class="modal-buttons">
+      <button class="modal-cancel" id="modal-cancel">Cancel</button>
+      <button class="modal-delete" id="modal-delete">Delete</button>
+    </div>
+  </div>
+</div>
+    <script src="app.js"></script>
+</body>
+
+</html>
