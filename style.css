@@ -494,7 +494,7 @@ body {
         -webkit-overflow-scrolling: touch;
     }
 
-    
+
     .habit-table {
         width: 100%;
         min-width: unset;
@@ -525,13 +525,17 @@ body {
     }
 
     .buttons {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-direction: row;
         width: 100%;
+        gap: 0.8rem;
     }
 
     .buttons button {
-        width: 100%;
+        margin: 0;
+    }
+
+    .buttons .today-btn {
         margin: 0;
     }
 
@@ -541,7 +545,7 @@ body {
         padding: 0;
     }
 
-    
+
     .habit-table {
         width: 100%;
         table-layout: auto;
@@ -564,16 +568,25 @@ body {
         min-width: 4rem;
     }
 
+
     .check-btn {
-        width: 2rem !important;
-        height: 2rem !important;
-
-        min-width: 2rem !important;
-        min-height: 2rem !important;
-
+        width: 2.4rem !important;
+        height: 2.4rem !important;
         border-radius: 50% !important;
-        display: inline-block;
-        padding: 0 !important;
+        position: relative !important;
+    }
+
+    .check-btn.checked::after {
+        content: '✓';
+        color: white;
+        font-size: 1.4rem !important;
+        font-weight: bold;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        background-color: transparent !important;
+        line-height: 1 !important;
     }
 
     .in-table-btn {
@@ -589,66 +602,87 @@ body {
 
 @media (max-width: 460px) {
 
-  html {
-    font-size: 50%;
-  }
+    html {
+        font-size: 50%;
+    }
 
-  body {
-    overflow-x: hidden;
-  }
+    body {
+        overflow-x: hidden;
+    }
 
-  
-  .navbar {
-    padding: 0.8rem;
-  }
 
-  .logo {
-    height: 3rem;
-  }
+    .navbar {
+        padding: 0.8rem;
+    }
 
-  
-  .buttons {
-    grid-template-columns: 1fr;
-    display: grid;
-    gap: 0.8rem;
-  }
+    .logo {
+        height: 3rem;
+    }
 
-  
-  .table-wrapper {
-    overflow-x: hidden; 
-    padding: 0;
-  }
 
-  .habit-table {
-    width: 100%;
-    table-layout: fixed; 
-    border-radius: 0;
-  }
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 0.8rem;
+    }
 
-  .habit-table th,
-  .habit-table td {
-    padding: 0.4rem 0.2rem;
-    font-size: 1rem;
-    white-space: normal; 
-    word-break: break-word;
-  }
+    .buttons .cal-btn {
+        flex: 1;
+        text-align: center;
+        margin: 0;
+    }
 
-  
-  .habit-table th:first-child,
-  .habit-table td:first-child {
-    width: 70px;
-    min-width: 70px;
-  }
-  .habit-table td {
-    min-width: unset;
-  }
-  .check-btn {
-    width: 1.8rem !important;
-    height: 1.8rem !important;
-  }
-  .in-table-btn {
-    font-size: 1rem;
-    padding: 0.3rem;
-  }
+    .buttons .today-btn {
+        flex: 2;
+        text-align: center;
+        margin: 0;
+    }
 
+
+    .table-wrapper {
+        overflow-x: hidden;
+        padding: 0;
+    }
+
+    .habit-table {
+        width: 100%;
+        table-layout: fixed;
+        border-radius: 0;
+    }
+
+    .habit-table th,
+    .habit-table td {
+        padding: 0.4rem 0.2rem;
+        font-size: 1rem;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+
+    .habit-table th:first-child,
+    .habit-table td:first-child {
+        width: 70px;
+        min-width: 70px;
+    }
+
+    .habit-table td {
+        min-width: unset;
+    }
+
+
+    .check-btn {
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+
+    .check-btn.checked::after {
+        font-size: 1.2rem !important;
+        background-color: transparent !important;
+    }
+
+    .in-table-btn {
+        font-size: 1rem;
+        padding: 0.3rem;
+    }
 }
