@@ -6,8 +6,7 @@ It allows users to create habits, track daily progress, maintain streaks, and ma
 ---
 
 ## 🚀 Live Demo 
-https://keen-twilight-6fcec7.netlify.app
-
+https://habit-tracker-00.netlify.app/
 ---
 
 ## ✨ Features
