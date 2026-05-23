@@ -37,8 +37,7 @@ cd habit-tracker
 ### Deployment
 
 Live URL:  
-https://keen-twilight-6fcec7.netlify.app
-
+https://habit-tracker-00.netlify.app/
 ---
 
 ## 2. Stack & Design Choices
